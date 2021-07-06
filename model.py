@@ -9,6 +9,12 @@ class Matrika:
         else:
             self.polja = polja[:]
 
+    def __str__(self):
+        lepsa_matrika = ""
+        for vrstica in self.polja:
+            lepsa_matrika += str(vrstica) + "\n"
+        return lepsa_matrika
+
     def __repr__(self):
         izpis = f'Matrika({str(self.polja)})'
         return izpis
@@ -37,13 +43,17 @@ class Matrika:
             transponiranka.append(vrstica)
         return Matrika(transponiranka)
 
-    def enaka_velikost(self, other):
+    def _enaka_velikost(self, other):
         """
         Metoda, ki preveri, ali sta dani matriki enakih dimenzij.
         """
-            polja1 = self.polja
-            polja2 = other.polja
-            return len(polja1) == len(polja2) and len(polja1[0]) == len(polja2[0])
+        polja1 = self.polja
+        polja2 = other.polja
+        return len(polja1) == len(polja2) and len(polja1[0]) == len(polja2[0])
+
+    def _preverba_kvadratnosti(self):
+        if self.vrstice != self.stolpci:
+            raise Exception("Prišlo je do napake! Matrika ni kvadratna.")
 
     def __add__(self, other):
         """
@@ -54,7 +64,7 @@ class Matrika:
         m = len(self.polja)
         n = len(self.polja[0])
         vsota = []
-        if self.enaka_velikost(other):
+        if self._enaka_velikost(other):
             for i in range(m):
                 vrstica = []
                 for j in range(n):
@@ -73,7 +83,7 @@ class Matrika:
         m = len(self.polja)
         n = len(self.polja[0])
         razlika = []
-        if self.enaka_velikost(other):
+        if self._enaka_velikost(other):
             for i in range(m):
                 vrstica = []
                 for j in range(n):
@@ -81,7 +91,7 @@ class Matrika:
                 razlika.append(vrstica)
             return Matrika(razlika)
         else:
-            return print('Matriki nista ustreznih velikosti, da bi se izvedla ta operacija.')
+            raise Exception('Matriki nista ustreznih velikosti, da bi se izvedla ta operacija.')
 
     def __mul__(self, other):
         """
@@ -114,7 +124,10 @@ class Matrika:
     def sled_matrike(self):
         """
         Metoda, ki sešteje diagonalne elemente v matriki.
+
+        Pazi, da je matrika kvadratna!
         """
+        self._preverba_kvadratnosti()
         sled = 0
         for i in range(len(self.polja)):
             sled += self.polja[i][i]
@@ -143,13 +156,14 @@ def preberi_matriko_iz_niza(niz):
         mat.append(elementi_vrstice)
     return Matrika(mat)
 
+##########################################
 
+
+# matr1 = Matrika()
 matr1 = [[1, 4, 6], [7, 8, 3], [0, 0, 9]]
 
 m3 = Matrika()
 m3.nicelna_matrika(8)
-m4 = Matrika()
-#m4.sled_matrike(matr1)
 # sled_matrike
 
 # m1 = Matrika()
