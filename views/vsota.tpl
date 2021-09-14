@@ -1,8 +1,8 @@
 % rebase
 
 <form action = "/vsota" method = "post">
-    Matrika1 <input type = "text" name = "matrika1" />
+    Matrika1 <textarea  type = "text" cols="10" rows="5" name = "matrika1" ></textarea>
     +
-    Matrika2 <input type = "text" name = "matrika2" />
+    Matrika2 <textarea type = "text" cols="10" rows="5" name = "matrika2" ></textarea>
     <button type="submit">sestej</button>
   </form>

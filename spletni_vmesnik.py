@@ -23,6 +23,18 @@ def odstej():
     rezultat = matrika1 - matrika2
     return bottle.template('izpis_razlike.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
 
+@bottle.get("/produkt")
+def pridobi_matrike():
+    return bottle.template('produkt.tpl')
+
+@bottle.post("/produkt")
+def zmnozi():
+    matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
+    matrika2 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika2'))
+    rezultat = matrika1 * matrika2
+    return bottle.template('izpis_produkta.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
+
+
 
 bottle.run(reloader=True)
 

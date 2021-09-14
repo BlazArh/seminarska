@@ -12,7 +12,7 @@ class Matrika:
     def __str__(self):
         lepsa_matrika = ""
         for vrstica in self.polja:
-            lepsa_matrika += str(vrstica) + "\n"
+            lepsa_matrika += ' '.join([str(x) for x in vrstica]) + "\n"
         return lepsa_matrika
 
     def __repr__(self):
@@ -52,7 +52,7 @@ class Matrika:
         return len(polja1) == len(polja2) and len(polja1[0]) == len(polja2[0])
 
     def _preverba_kvadratnosti(self):
-        if self.vrstice != self.stolpci:
+        if len(self.polja) != len(self.polja[0]):
             raise Exception("Prišlo je do napake! Matrika ni kvadratna.")
 
     def __add__(self, other):
