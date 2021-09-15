@@ -5,6 +5,7 @@ from bottle import debug
 
 debug(True)
 
+
 @bottle.get('/')
 def index():
     return bottle.template('uvodna_stran.tpl')
@@ -43,25 +44,14 @@ def zmnozi():
     return bottle.template('izpis_produkta.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
 
 @bottle.get("/sled")
-def pridobi_matrike():
+def pridobi_matrike4():
     return bottle.template('sled.tpl')
 
 @bottle.post("/sled")
 def sledi():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
     rezultat = model.sled_matrike(matrika1)
-    return bottle.template('izpis_sled.tpl', matrika1 = matrika1, rezultat = rezultat)
-
-@bottle.get("/transponiranje")
-def pridobi_matrike():
-    return bottle.template('transponiranje.tpl')
-
-@bottle.post("/transponiranje")
-def sledi():
-    matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
-    rezultat = model.transponiraj(matrika1)
-    return bottle.template('izpis_transponiranje.tpl', matrika1 = matrika1, rezultat = rezultat)
+    return bottle.template('izpis_sled.tpl', rezultat = rezultat)
 
 
 bottle.run(reloader=True)
-
