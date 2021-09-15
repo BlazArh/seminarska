@@ -1,8 +1,8 @@
-% rebase
+% rebase('base.tpl')
 
 <form action = "/produkt" method = "post">
     Matrika1 <textarea  type = "text" cols="10" rows="5" name = "matrika1" ></textarea>
     *
-    Matrika2 <textarea  type = "text" cols="10" rows="5" name = "matrika1" ></textarea>
+    Matrika2 <textarea  type = "text" cols="10" rows="5" name = "matrika2" ></textarea>
     <button type="submit">zmnozi</button>
   </form>

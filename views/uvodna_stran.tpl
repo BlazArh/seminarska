@@ -1,7 +1,8 @@
 % rebase('base.tpl', naslov='Kalkulator matrik')
 
 
-<img src="https://raw.githubusercontent.com/BlazArh/seminarska/main/views/matrika.jpg" alt="Dostava hrane" width=400> 
+<img src="https://raw.githubusercontent.com/BlazArh/seminarska/main/views/matrika.jpg" alt="Dostava hrane" width=400>
+<br> 
 <form action="/vsota" method="get">
     <button type="submit">Seštej matriki</button>
 </form>
