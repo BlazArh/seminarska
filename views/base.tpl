@@ -8,19 +8,17 @@
   </head>
 <html>
 
-<body style="background-color:#FFFFFF;">
-    <nav class="navbar navbar-light" style="background-color: #2171bd;">
-            <div class="container">
-              <h1>Kalkukator matrik</h1>
-            </div>                
-        </nav>
 
+<body>
+<nav class="navbar navbar-light" style="background-color: #2171bd;">
+  <h2 style="color:#000000">KALKULATOR MATRIK</h2>
+  <h2 style="color:#000000">Pozdravljeni v najsodobnejšem kalkulatorju matrik. Uživajte v njegovi uporabi.</h2>
+</nav>
 <center>
-    <div class="container">
-        <section>
-            {{!base}}
-        </section>
-    </div>
+  <div class="container">
+      {{!base}}
+  </div>
 </center>
 </body>
+
 </html>
