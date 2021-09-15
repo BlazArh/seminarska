@@ -1,6 +1,7 @@
 % rebase
 
-{{matrika1.__str__()}}
+ for vrstica in matrika1.__str__().split('\n'):
+{{vrstica}}
 -
 {{matrika2.__str__()}}
 =
