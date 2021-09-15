@@ -11,15 +11,16 @@
 <body style="background-color:#FFFFFF;">
     <nav class="navbar navbar-light" style="background-color: #2171bd;">
             <div class="container">
-              <a class="text-dark"><h2>Kalkulator matrik</h2></a>
-              <a href="{{url('pridobi_matrike1')}}" class="text-dark">Seštej matriki</a>
+              <h1>Kalkukator matrik</h1>
             </div>                
         </nav>
 
+<center>
     <div class="container">
         <section>
             {{!base}}
         </section>
     </div>
+</center>
 </body>
 </html>

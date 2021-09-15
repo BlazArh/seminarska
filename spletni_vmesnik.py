@@ -1,6 +1,9 @@
 from re import template
 import bottle
 import model
+from bottle import debug
+
+debug(True)
 
 @bottle.get('/')
 def index():
@@ -18,7 +21,7 @@ def sestej():
     return bottle.template('izpis_vsote.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
 
 @bottle.get("/razlika")
-def pridobi_matrike():
+def pridobi_matrike2():
     return bottle.template('razlika.tpl')
 
 @bottle.post("/razlika")
@@ -29,7 +32,7 @@ def odstej():
     return bottle.template('izpis_razlike.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
 
 @bottle.get("/produkt")
-def pridobi_matrike():
+def pridobi_matrike3():
     return bottle.template('produkt.tpl')
 
 @bottle.post("/produkt")
@@ -48,6 +51,16 @@ def sledi():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
     rezultat = model.sled_matrike(matrika1)
     return bottle.template('izpis_sled.tpl', matrika1 = matrika1, rezultat = rezultat)
+
+@bottle.get("/transponiranje")
+def pridobi_matrike():
+    return bottle.template('transponiranje.tpl')
+
+@bottle.post("/transponiranje")
+def sledi():
+    matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
+    rezultat = model.transponiraj(matrika1)
+    return bottle.template('izpis_transponiranje.tpl', matrika1 = matrika1, rezultat = rezultat)
 
 
 bottle.run(reloader=True)
