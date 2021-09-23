@@ -17,8 +17,11 @@ def pridobi_matrike1():
 def sestej():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
     matrika2 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika2'))
-    rezultat = matrika1 + matrika2
-    return bottle.template('izpis_vsote.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
+    try:
+        rezultat = matrika1 + matrika2
+        return bottle.template('izpis_vsote.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
+    except:
+        return bottle.template("izpis_napake.tpl")
 
 @bottle.get("/razlika")
 def pridobi_matrike2():
@@ -28,8 +31,11 @@ def pridobi_matrike2():
 def odstej():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
     matrika2 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika2'))
-    rezultat = matrika1 - matrika2
-    return bottle.template('izpis_razlike.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
+    try:
+        rezultat = matrika1 - matrika2
+        return bottle.template('izpis_razlike.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
+    except:
+        return bottle.template("izpis_napake.tpl")
 
 @bottle.get("/produkt")
 def pridobi_matrike3():
@@ -39,28 +45,31 @@ def pridobi_matrike3():
 def zmnozi():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
     matrika2 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika2'))
-    rezultat = matrika1 * matrika2
-    return bottle.template('izpis_produkta.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
+    try:
+        rezultat = matrika1 * matrika2
+        return bottle.template('izpis_produkta.tpl', matrika1 = matrika1, matrika2 = matrika2, rezultat = rezultat)
+    except:
+        return bottle.template("izpis_napake.tpl")
 
 @bottle.get("/sled")
-def pridobi_matrike():
+def pridobi_matrike4():
     return bottle.template('sled.tpl')
 
 @bottle.post("/sled")
 def sledi():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
-    rezultat = model.sled_matrike(matrika1)
+    rezultat = matrika1.sled_matrike()
     return bottle.template('izpis_sled.tpl', matrika1 = matrika1, rezultat = rezultat)
 
 @bottle.get("/transponiranje")
-def pridobi_matrike():
+def pridobi_matrike5():
     return bottle.template('transponiranje.tpl')
 
 @bottle.post("/transponiranje")
-def sledi():
+def trans():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
-    rezultat = model.transponiraj(matrika1)
-    return bottle.template('izpis_transponiranje.tpl', matrika1 = matrika1, rezultat = rezultat)
+    rezultat = matrika1.transponiraj()
+    return bottle.template('izpis_trans.tpl', matrika1 = matrika1, rezultat = rezultat)
 
 
 bottle.run(reloader=True)
