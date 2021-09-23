@@ -103,7 +103,7 @@ class Matrika:
         if len(self.polja[0]) == len(other.polja):            # pogoj
             for i in range(len(self.polja)):
                 vrstica = []
-                for j in range(len(other.polja)):
+                for j in range(len(other.polja[0])):
                     vsota = 0
                     for k in range(len(self.polja[i])):
                         vsota += self.polja[i][k] * other.polja[k][j]
@@ -111,7 +111,7 @@ class Matrika:
                 matrika.append(vrstica)
             return Matrika(matrika)
         else:
-            return print('Matriki nista ustreznih velikosti, da bi se izvedla ta operacija.')
+            return Exception('Matriki nista ustreznih velikosti, da bi se izvedla ta operacija.')
 
     def nicelna_matrika(self, n):
         """
@@ -131,7 +131,7 @@ class Matrika:
         sled = 0
         for i in range(len(self.polja)):
             sled += self.polja[i][i]
-        return Matrika(sled)
+        return sled
 
     @staticmethod
     def poljubna_matrika(st_vrstic, st_stolpcev):
