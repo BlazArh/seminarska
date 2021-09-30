@@ -1,4 +1,5 @@
 import random
+#from spletni_vmesnik import index
 
 
 class Matrika:
@@ -155,6 +156,7 @@ def preberi_matriko_iz_niza(niz):
         elementi_vrstice = [int(element) for element in elementi_vrstice]
         mat.append(elementi_vrstice)
     return Matrika(mat)
+
 
 ##########################################
 

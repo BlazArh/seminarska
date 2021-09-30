@@ -11,8 +11,8 @@
 
 <body>
 <nav class="navbar navbar-light" style="background-color: #2171bd;">
-  <h2 style="color:#000000">KALKULATOR MATRIK</h2>
-  <h2 style="color:#000000">Pozdravljeni v najsodobnejšem kalkulatorju matrik. Uživajte v njegovi uporabi.</h2>
+  <h2 style="color:#000000">KALKULATOR MATRIK.</h2>
+  <h3 style="color:#000000"> Pozdravljeni v najsodobnejšem kalkulatorju matrik. Uživajte v njegovi uporabi.</h3>
 </nav>
 <center>
   <div class="container">

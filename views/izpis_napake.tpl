@@ -1,7 +1,8 @@
 % rebase
 
-<h2>Matriki nista ustreznih velikosti</h2>
+<h1 style="color:#FFD700">Velikost vnešene/vnešenih matrik ni bila ustrezna.</h1>
 
+Poskusi ponovno:
 <form action="/" method="get">
     <button type="submit">Uvodna stran</button>
 </form>

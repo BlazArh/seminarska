@@ -58,8 +58,11 @@ def pridobi_matrike4():
 @bottle.post("/sled")
 def sledi():
     matrika1 = model.preberi_matriko_iz_niza(bottle.request.forms.getunicode('matrika1'))
-    rezultat = matrika1.sled_matrike()
-    return bottle.template('izpis_sled.tpl', matrika1 = matrika1, rezultat = rezultat)
+    try:
+        rezultat = matrika1.sled_matrike()
+        return bottle.template('izpis_sled.tpl', matrika1 = matrika1, rezultat = rezultat)
+    except:
+        return bottle.template("izpis_napake.tpl")
 
 @bottle.get("/transponiranje")
 def pridobi_matrike5():
