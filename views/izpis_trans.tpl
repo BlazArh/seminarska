@@ -1,9 +1,28 @@
-% rebase
+% rebase('base.tpl')
 
+<table>
 % for vrstica in matrika1.polja:
-{{" ".join([str(x) for x in vrstica])}}<br/>
+<tr>
+% for element in vrstica:
+<td>{{str(element)}}</td>
 % end
-TRANSPONIRANKA => <br/>
-% for vrstica in rezultat.polja:
-{{" ".join([str(x) for x in vrstica])}}<br/>
+</tr>
 % end 
+</table>
+TRANSPONIRANKA => <br/>
+<table>
+% for vrstica in rezultat.polja:
+<tr>
+% for element in vrstica:
+<td>{{str(element)}}</td>
+% end
+</tr>
+% end 
+</table>
+
+<br/>
+<br/>
+<br/>
+<form action="/" method="get">
+    <button type="submit">Uvodna stran</button>
+</form>

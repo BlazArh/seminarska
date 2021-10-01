@@ -1,4 +1,4 @@
-% rebase
+% rebase('base.tpl')
 sled od matrike 
 <table>
 % for vrstica in matrika1.polja:
@@ -11,3 +11,9 @@ sled od matrike
 </table>
 = 
 {{rezultat}}
+<br/>
+<br/>
+<br/>
+<form action="/" method="get">
+    <button type="submit">Uvodna stran</button>
+</form>

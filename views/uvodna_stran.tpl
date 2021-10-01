@@ -18,3 +18,7 @@
 <form action="/transponiranje" method="get">
     <button type="submit">Transponiraj matriko</button>
 </form>
+<form action="/navodila" method="get">
+    <button type="submit">KAKO PRAVILNO NAPISATI MATRIKO</button>
+</form>
+

@@ -1,4 +1,4 @@
-% rebase
+% rebase('base.tpl')
 
 <h1 style="color:#FFD700">Velikost vnešene/vnešenih matrik ni bila ustrezna.</h1>
 

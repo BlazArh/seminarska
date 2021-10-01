@@ -1,4 +1,4 @@
-% rebase
+
 
 <table>
 % for vrstica in matrika1.polja:
@@ -29,3 +29,9 @@
 </tr>
 % end 
 </table>
+<br/>
+<br/>
+<br/>
+<form action="/" method="get">
+    <button type="submit">Uvodna stran</button>
+</form>

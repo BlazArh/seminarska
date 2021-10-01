@@ -74,6 +74,11 @@ def trans():
     rezultat = matrika1.transponiraj()
     return bottle.template('izpis_trans.tpl', matrika1 = matrika1, rezultat = rezultat)
 
+@bottle.get("/navodila")
+def nav():
+    return bottle.template('navodila.tpl')
+
+
 
 bottle.run(reloader=True)
 
