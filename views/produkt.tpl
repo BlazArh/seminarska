@@ -1,6 +1,6 @@
 % rebase('base.tpl')
 <br/>
-Pazi, da se število stoplcev prve matrike ujema s številom vrstic druge matrika.
+Pazi, da se število stoplcev prve matrike ujema s številom vrstic druge matrike.
 <br/>
 <br/>
 
