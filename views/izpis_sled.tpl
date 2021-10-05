@@ -1,5 +1,8 @@
 % rebase('base.tpl')
-sled od matrike 
+<br/>
+<br/>
+<br/>
+
 <table>
 % for vrstica in matrika1.polja:
 <tr>
@@ -9,8 +12,8 @@ sled od matrike
 </tr>
 % end 
 </table>
-= 
-{{rezultat}}
+=> <br/>
+sled: {{rezultat}}<br/>
 
 <br/>
 <br/>

@@ -1,4 +1,7 @@
 % rebase('base.tpl')
+<br/>
+<br/>
+<br/>
 
 <table>
 % for vrstica in matrika1.polja:
