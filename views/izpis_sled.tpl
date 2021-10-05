@@ -11,6 +11,7 @@ sled od matrike
 </table>
 = 
 {{rezultat}}
+
 <br/>
 <br/>
 <br/>

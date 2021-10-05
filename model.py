@@ -1,5 +1,4 @@
 import random
-#from spletni_vmesnik import index
 
 
 class Matrika:
@@ -161,18 +160,3 @@ def preberi_matriko_iz_niza(niz):
 ##########################################
 
 
-# matr1 = Matrika()
-matr1 = [[1, 4, 6], [7, 8, 3], [0, 0, 9]]
-
-m3 = Matrika()
-m3.nicelna_matrika(8)
-# sled_matrike
-
-# m1 = Matrika()
-# a = m1.identiteta(3)
-# m2 = Matrika()
-# m2.identiteta(3)
-
-
-# matr2 = [[9, 2, 6], [7, 0, 1], [8, 3, 9]]
-# matr3 = [[1,6], [7,6]]

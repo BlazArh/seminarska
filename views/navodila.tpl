@@ -1,4 +1,5 @@
 % rebase('base.tpl')
+<br/>
 Ko v vrstico pišeš števila pazi, da je med dvema zaporednima številoma le en presledek. Ko želiš iti v novo vrstico, pritisni ENTER.<br/>
 <br/>
 Primer primerne 3x3 matrike. <br/>
