@@ -9,5 +9,9 @@ Pazi, da se število stoplcev prve matrike ujema s številom vrstic druge matrik
     Matrika1 <textarea  type = "text" cols="20" rows="8" name = "matrika1" ></textarea>
     *
     Matrika2 <textarea  type = "text" cols="20" rows="8" name = "matrika2" ></textarea>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <button type="submit">zmnoži</button>
   </form>
